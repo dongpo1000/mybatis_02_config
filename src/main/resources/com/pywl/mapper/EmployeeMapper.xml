@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--使用mapper接口-->
+<mapper namespace="com.pywl.mapper.EmployeeMapper">
+
+    <select id="selectByPrimaryId" resultType="com.pywl.entity.Employee">
+        SELECT
+          id,
+          user_name userName,
+          gender,
+          email
+        FROM
+          tb_employee
+        WHERE
+          id = #{id}
+    </select>
+
+    <select id="selectByPrimaryId" resultType="com.pywl.entity.Employee" databaseId="mysql">
+        SELECT
+          id,
+          user_name userName,
+          gender,
+          email
+        FROM
+          tb_employee
+        WHERE
+          id = #{id}
+    </select>
+
+    <select id="selectByPrimaryId" resultType="com.pywl.entity.Employee" databaseId="oracle">
+        SELECT
+          EMPLOYEE_ID id,
+          LAST_NAME userName,
+          EAMIL email
+        FROM
+          employees
+        WHERE
+          EMPLOYEE_ID = #{id}
+    </select>
+
+</mapper>
