@@ -1,0 +1,2 @@
+# mybatis_02_config
+mybatis学习之配置 参考sgg的mybatis学习视频
